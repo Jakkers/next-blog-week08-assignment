@@ -44,6 +44,11 @@ Detailing useful external sources that helped you complete the assignment (e.g Y
 Describing errors or bugs you encountered while completing your assignment.
 Requesting feedback about a specific part of your submission.
 
+## Attributions and sources
+
+- List of UK industries: https://www.ibisworld.com/united-kingdom/list-of-industries/
+- Datalist input type: https://www.w3schools.com/tags/tag_datalist.asp
+
 ## From Next.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
