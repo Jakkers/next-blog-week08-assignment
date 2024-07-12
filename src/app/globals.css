@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +36,15 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h1 {
+  font-size: xx-large;
+  padding-bottom: 8px;
+  padding-top: 14px;
+}
+
+h2 {
+  font-size: large;
+  padding-bottom: 18px;
 }
