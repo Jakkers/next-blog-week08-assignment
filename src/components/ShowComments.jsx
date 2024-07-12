@@ -1,5 +1,5 @@
 import { dbConnect } from "@/utils/dbConnection";
-import DeleteComment from "./DeleteComment";
+// import DeleteComment from "./DeleteComment";
 
 export default async function ShowComments({ params }) {
   const db = dbConnect();
@@ -14,7 +14,7 @@ export default async function ShowComments({ params }) {
         <div key={post.id}>
           <h1>{post.username}</h1>
           <p>{post.comment}</p>
-          <DeleteComment />
+          {/* <DeleteComment /> */}
         </div>
       ))}
     </>
