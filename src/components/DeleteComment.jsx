@@ -7,11 +7,14 @@
 import { dbConnect } from "@/utils/dbConnection";
 
 export default function deleteButton() {
-  //   async function getData() {
-  //     const db = dbConnect();
-  //     const commentsData = (await db.query(`SELECT id FROM comments`)).rows;
-  //     return getData();
-  //   }
+  async function getData() {
+    const db = dbConnect();
+    const commentsData = (await db.query(`SELECT id FROM comments`)).rows;
+    return commentsData;
+  }
+  const id = getData();
+  console.log(id);
+
   async function handleSubmit(deleteData) {
     "use server";
     const id = deleteData.get("id");
