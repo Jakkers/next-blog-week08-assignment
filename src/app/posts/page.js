@@ -15,7 +15,7 @@ export default async function PostsPage() {
   return (
     <>
       <h1>Posts</h1>
-      <div className="grid grid-cols-6 gap-4 mx-6">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-6">
         {posts.map((post) => (
           <div key={post.id}>
             <Link href={`/posts/${post.id}`}>
