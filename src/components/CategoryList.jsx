@@ -15,7 +15,12 @@ export default function CategoryList() {
   return (
     <form action={handleSelect} className="pb-7">
       <label htmlFor="category">Filter By Industry </label>
-      <select id={FormStyles.inputText} name="category" required>
+      <select
+        className="w-48"
+        id={FormStyles.inputText}
+        name="category"
+        required
+      >
         <option value="">Select Option</option>
         <option value="1">Accommodation and Food Service Activities</option>
         <option value="2">Construction</option>

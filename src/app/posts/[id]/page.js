@@ -46,15 +46,17 @@ JOIN categories ON ui_posts.cat_id = categories.id WHERE ui_posts.id = ${params.
           <h1>{post.title}</h1>
           <h2>{post.cat_name}</h2>
           <Image src={post.image} alt={post.title} width={1000} height={800} />
-          <p>{post.content}</p>
-          <a href={post.source} target="blank" className="text-sky-500">
+          <p className="pt-5">{post.content}</p>
+          <a href={post.source} target="blank" className="text-sky-500 pt-3">
             Website link
           </a>
         </div>
       ))}
       {/* Here, I will display a form with inputs connected to the database columns by name */}
-      <CommentForm params={params.id} />
-      <ShowComments params={params.id} />
+      <div>
+        <CommentForm params={params.id} />
+        <ShowComments params={params.id} />
+      </div>
     </>
   );
 }

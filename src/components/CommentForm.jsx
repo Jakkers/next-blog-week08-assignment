@@ -2,6 +2,7 @@ import { dbConnect } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import FormStyles from "@/styles/Form.module.css";
+import ButtonStyles from "@/styles/Button.module.css";
 
 export default function CommentForm({ params }) {
   async function handleSubmit(formData) {
@@ -22,13 +23,15 @@ export default function CommentForm({ params }) {
   return (
     <form
       action={handleSubmit}
-      className="flex flex-col w-96 content-center p-4"
+      className="flex flex-col w-96 content-center p-4 gap-4 text-left"
     >
       <label htmlFor="username">Username </label>
       <input name="username" id={FormStyles.inputText} type="text"></input>
       <label htmlFor="comment">Comments </label>
       <textarea name="comment" id={FormStyles.inputText}></textarea>
-      <button type="submit">Submit</button>
+      <button id={ButtonStyles.button} type="submit">
+        Submit
+      </button>
     </form>
   );
 }

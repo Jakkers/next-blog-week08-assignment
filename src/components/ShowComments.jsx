@@ -12,7 +12,10 @@ export default async function ShowComments({ params }) {
   return (
     <>
       {userComment.map((post) => (
-        <div key={post.id}>
+        <div
+          className="flex flex-col w-96 content-center p-4 gap-4 text-left"
+          key={post.id}
+        >
           <h1>{post.username}</h1>
           <p>{post.comment}</p>
           <DeleteComment params={params} data={post.id} />
