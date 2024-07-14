@@ -13,11 +13,8 @@ export default function CategoryList() {
     redirect(`/posts/categories/${cat_id}`);
   }
   return (
-    <form
-      action={handleSelect}
-      className="flex flex-col w-96 content-center p-4"
-    >
-      <label htmlFor="category">Choose your industry from the list </label>
+    <form action={handleSelect} className="pb-7">
+      <label htmlFor="category">Filter By Industry </label>
       <select id={FormStyles.inputText} name="category" required>
         <option value="">Select Option</option>
         <option value="1">Accommodation and Food Service Activities</option>

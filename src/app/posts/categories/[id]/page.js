@@ -4,7 +4,7 @@
 //!remember the metadata
 export const metadata = {
   title: "UI Reviews – Posts",
-  description: "Meet the team!",
+  description: "View all the great ui submissions here by category",
 };
 
 import { dbConnect } from "@/utils/dbConnection";
@@ -32,7 +32,7 @@ export default async function CategoriesPage({ searchParams, params }) {
   return (
     <>
       <h1>Posts</h1>
-      <div className="pb-9">
+      <div className="pb-5">
         <Link href={"/posts?sort=asc"}>Sort Ascending</Link> |{" "}
         <Link href={"/posts?sort=desc"}>Sort Descending</Link> |{" "}
         <Link href={"/posts"}>Show All</Link>

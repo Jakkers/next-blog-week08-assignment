@@ -2,6 +2,7 @@ import { dbConnect } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import FormStyles from "@/styles/Form.module.css";
+import ButtonStyles from "@/styles/Button.module.css";
 
 export default function Form() {
   async function handleSubmit(formData) {
@@ -26,7 +27,7 @@ export default function Form() {
   return (
     <form
       action={handleSubmit}
-      className="flex flex-col w-96 content-center p-4"
+      className="flex flex-col w-96 content-center p-4 gap-4 text-left"
     >
       <label htmlFor="title">Title </label>
       <input name="title" id={FormStyles.inputText} type="text"></input>
@@ -72,7 +73,9 @@ export default function Form() {
         <option value="23">Online Retail</option>
         <option value="24">Consumer Goods & Services</option>
       </datalist>
-      <button type="submit">Submit</button>
+      <button id={ButtonStyles.button} type="submit">
+        Submit
+      </button>
     </form>
   );
 }

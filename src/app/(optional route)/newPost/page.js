@@ -1,5 +1,11 @@
 //you need some navigation
 //!remember the metadata
+
+export const metadata = {
+  title: "UI Reviews – Add Post",
+  description: "Add your UI submissions here",
+};
+
 // for adding an option to upload an image
 import Form from "@/components/Form";
 import Link from "next/link";

@@ -48,6 +48,7 @@ Requesting feedback about a specific part of your submission.
 
 - List of UK industries: https://www.ibisworld.com/united-kingdom/list-of-industries/
 - Datalist input type: https://www.w3schools.com/tags/tag_datalist.asp
+- Homepage image source: https://dribbble.com/shots/24289937-Stacklist-mobile-app
 
 ## From Next.js
 
