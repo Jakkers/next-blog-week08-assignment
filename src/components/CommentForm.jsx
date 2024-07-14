@@ -16,6 +16,8 @@ export default function CommentForm({ params }) {
       `INSERT INTO comments(username, comment, post_id) VALUES ($1, $2, $3)`,
       [username, comment, post_id]
     );
+    revalidatePath(`/posts/${params}`);
+    redirect(`/posts/${params}`);
   }
   return (
     <form

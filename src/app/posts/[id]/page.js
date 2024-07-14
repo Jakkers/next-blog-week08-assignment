@@ -2,6 +2,24 @@
 // we need to use params to render data dynamically
 //!remember the metadata
 
+//Metadata
+export async function generateMetadata({ params }) {
+  const db = dbConnect();
+  const onePost = (
+    await db.query(`SELECT ui_posts.id, ui_posts.title, ui_posts.image, ui_posts.content, ui_posts.source, categories.cat_name
+FROM ui_posts
+JOIN categories ON ui_posts.cat_id = categories.id WHERE ui_posts.id = ${params.id}`)
+  ).rows;
+  console.log(onePost);
+
+  const post = onePost[0];
+
+  return {
+    title: `Ui Review Post Page - ${post.title}`,
+    description: `A review of ${post.title} - ${post.content}`,
+  };
+}
+
 import { dbConnect } from "@/utils/dbConnection";
 import Image from "next/image";
 

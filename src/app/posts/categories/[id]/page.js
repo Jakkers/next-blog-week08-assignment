@@ -15,10 +15,12 @@ import Link from "next/link";
 import DeletePost from "@/components/DeletePost";
 import CategoryList from "@/components/CategoryList";
 
-export default async function PostsPage({ searchParams }) {
+export default async function CategoriesPage({ searchParams, params }) {
   //here I need to get the posts from the database
   const db = dbConnect();
-  const posts = (await db.query(`SELECT * FROM ui_posts`)).rows;
+  const posts = (
+    await db.query(`SELECT * FROM ui_posts WHERE cat_id = ${params.id}`)
+  ).rows;
 
   //serch params for sorting content
   const postData = await posts;
